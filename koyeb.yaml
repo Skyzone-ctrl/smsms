@@ -1,0 +1,11 @@
+name: testapi
+services:
+  - name: testapi-service
+    image:
+      name: docker.io/library/testapi:latest
+    ports:
+        port: 8000
+        healthcheck:
+          path: /
+          port: 8000
+        protocol: http
